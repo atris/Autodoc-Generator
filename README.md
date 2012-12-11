@@ -19,8 +19,4 @@ e.g.
 
 ./run_autodoc.sh database1
 
-If path of psql is present in command line,
-
-./run_autodoc.sh database1
-
 To view the results,please open the autodoc_[database name] folder/index.html and follow the links.
