@@ -17,4 +17,4 @@ If path of psql is present in command line,
 
 ./run_autodoc.sh psql database1
 
-To view the results,please open index.html and follow the links.
+To view the results,please open the autodoc_[database name] folder/index.html and follow the links.

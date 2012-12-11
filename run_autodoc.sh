@@ -29,3 +29,9 @@ echo "<a href='index.html'> Back </a>" >> test_functions.html
 echo "<br>" >>test_sequences.html
 echo "<a href='index.html'> Back </a>" >> test_sequences.html
 
+mkdir autodoc_$2 2>/dev/null
+
+cp index.html test_tables.html test_views.html test_functions.html test_sequences.html autodoc_$2
+
+rm index.html test_tables.html test_views.html test_functions.html test_sequences.html
+
