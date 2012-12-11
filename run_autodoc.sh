@@ -17,7 +17,7 @@ echo "<a href='test_sequences.html'> Sequences </a>" >> index.html
 echo "<br>" >> index.html
 echo "<a href='test_functions.html'> Functions </a>" >> index.html
 for file in $PWD/SQL\ Files/*; do
-    /usr/local/pgsql/bin/psql -f "$file" "atri1"
+    $1 -f "$file" $2
 done
 
 echo "<br>" >>test_tables.html
