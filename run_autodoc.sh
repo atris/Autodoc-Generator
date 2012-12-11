@@ -16,8 +16,10 @@ echo "<br>" >> index.html
 echo "<a href='test_sequences.html'> Sequences </a>" >> index.html
 echo "<br>" >> index.html
 echo "<a href='test_functions.html'> Functions </a>" >> index.html
+
+PSQLCL=$(cat autodoc_conf.txt)
 for file in $PWD/SQL\ Files/*; do
-    $1 -f "$file" $2
+    /usr/local/pgsql/bin/psql -f "$file" $1
 done
 
 echo "<br>" >>test_tables.html
@@ -29,9 +31,9 @@ echo "<a href='index.html'> Back </a>" >> test_functions.html
 echo "<br>" >>test_sequences.html
 echo "<a href='index.html'> Back </a>" >> test_sequences.html
 
-mkdir autodoc_$2 2>/dev/null
+mkdir autodoc_$1 2>/dev/null
 
-cp index.html test_tables.html test_views.html test_functions.html test_sequences.html autodoc_$2
+cp index.html test_tables.html test_views.html test_functions.html test_sequences.html autodoc_$1
 
 rm index.html test_tables.html test_views.html test_functions.html test_sequences.html
 
